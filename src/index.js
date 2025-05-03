@@ -20,8 +20,8 @@ app.use("/users", usersRouter)
 app.use("/comments", commentsRouter)
 app.use("/posts", postsRouter)
 
-app.use("./register", usersRegisterRouter)
-app.use("./login")
+app.use("/register", usersRegisterRouter)
+app.use("/login")
 
 app.use((error, req, res, next) => {
     res.send({message: error.message})
