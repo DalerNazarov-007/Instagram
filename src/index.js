@@ -4,7 +4,6 @@ const usersRouter = require("./routes/users.router");
 const commentsRouter = require("./routes/comments.router");
 const postsRouter = require("./routes/posts.router");
 const usersRegisterRouter = require("./routes/userRegister.router");
-const userModel = require("./models/user");
 const jwt = require("jsonwebtoken")
 
 
@@ -21,7 +20,7 @@ app.use("/comments", commentsRouter)
 app.use("/posts", postsRouter)
 
 app.use("/register", usersRegisterRouter)
-app.use("/login")
+// app.use("/login")
 
 app.use((error, req, res, next) => {
     res.send({message: error.message})
