@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "b0e62ffa-5255-46a4-8d77-debc7bc1af53",
+		"name": "Instagram",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43268308"
+	},
+	"item": [
+		{
+			"name": "Getting posts",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Registeration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Daler",
+							"type": "text"
+						},
+						{
+							"key": "surname",
+							"value": "Nazarov",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "dalern111",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "dalern001",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "daler@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "birthYear",
+							"value": "2006",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4444/register",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adding a post",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "dalern111",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "dalern001",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4444/login",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Getting all comments",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Adding a comment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiNjgxNzU4ZDc5ODE4NjE0OGY4MzQ3MTk0IiwiaWF0IjoxNzQ2MzYwNTM1LCJleHAiOjE3NDYzNjIzMzV9.wnYAzSa8cAk7_hgVzLchZVzjBMDK9SCNPupRNhKPpj4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "description",
+							"value": "Goodjob",
+							"type": "text"
+						},
+						{
+							"key": "UserId",
+							"value": "681758d798186148f8347194",
+							"type": "text"
+						},
+						{
+							"key": "PostId",
+							"value": "68175aaf30a5f6c0bed2604e",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4444/comments",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"comments"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

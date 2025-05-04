@@ -5,13 +5,13 @@ const commentModel = require("../models/comments");
 const { commentValid, commentValidUpdate } = require("../validation/commentValidation");
 
 async function getAllComments(req, res) {
-    const comments = await commentModel.find().populate("UserId")
+    const comments = await commentModel.find().populate("UserId").populate("PostId")
     res.status(200).send(comments)
 }
 
 async function getOneById(req, res) {
     const id = req.params.id
-    const comment = await commentModel.findById(id).populate("UserId")
+    const comment = await commentModel.findById(id).populate("UserId").populate("PostId")
     res.status(200).send(comment)
 }
 

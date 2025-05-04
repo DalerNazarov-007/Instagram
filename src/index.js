@@ -3,8 +3,9 @@ const mongoose = require("mongoose");
 const usersRouter = require("./routes/users.router");
 const commentsRouter = require("./routes/comments.router");
 const postsRouter = require("./routes/posts.router");
-const usersRegisterRouter = require("./routes/userRegister.router");
-const jwt = require("jsonwebtoken")
+const usersRegisterRouter = require("./routes/user.register.router");
+const jwt = require("jsonwebtoken");
+const usersLoginRouter = require("./routes/user.login.router");
 
 
 const app = express();
@@ -20,7 +21,7 @@ app.use("/comments", commentsRouter)
 app.use("/posts", postsRouter)
 
 app.use("/register", usersRegisterRouter)
-// app.use("/login")
+app.use("/login", usersLoginRouter)
 
 app.use((error, req, res, next) => {
     res.send({message: error.message})
