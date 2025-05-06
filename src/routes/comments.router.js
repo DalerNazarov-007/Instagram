@@ -4,10 +4,10 @@ const authenticateToken = require("../middleware/auth.middleware")
 
 const commentsRouter = express.Router()
 
-commentsRouter.get("/", getAllComments)
-commentsRouter.get("/:id", getOneById)
-commentsRouter.post("/", authenticateToken ,addNewComment)
-commentsRouter.put("/:id", authenticateToken ,editComment)
-commentsRouter.delete("/:id", authenticateToken ,deleteComment)
+commentsRouter.get("/", authenticateToken, getAllComments)
+commentsRouter.get("/:id", authenticateToken, getOneById)
+commentsRouter.post("/", authenticateToken, addNewComment)
+commentsRouter.put("/:id", authenticateToken, editComment)
+commentsRouter.delete("/:id", authenticateToken, deleteComment)
 
 module.exports = commentsRouter

@@ -1,7 +1,7 @@
 const { Schema, default: mongoose } = require("mongoose");
 
 const commentSchema = new Schema({
-    description: {
+    message: {
         type: String,
         minLength: 1,
         maxLength: 500

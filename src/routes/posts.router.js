@@ -6,8 +6,8 @@ const authenticateToken = require("../middleware/auth.middleware")
 
 const postsRouter = express.Router()
 
-postsRouter.get("/", getAllPosts)
-postsRouter.get("/:id", getOneById)
+postsRouter.get("/", authenticateToken, getAllPosts)
+postsRouter.get("/:id", authenticateToken, getOneById)
 postsRouter.post("/", authenticateToken ,addNewPost)
 postsRouter.put("/:id", authenticateToken ,editPost)
 postsRouter.delete("/:id", authenticateToken ,deletePost)

@@ -1,13 +1,13 @@
 const Joi = require("joi")
 
 const postValid = Joi.object({
-    name: Joi.string().min(1).max(500).required(),
+    title: Joi.string().min(1).max(500).required(),
     description: Joi.string().min(1).max(500).required(),
     UserId: Joi.string().required()
 })
 
 const postValidUpdate = Joi.object({
-    name: Joi.string().min(1).max(500),
+    title: Joi.string().min(1).max(500),
     description: Joi.string().min(1).max(500),
     UserId: Joi.string()
 })

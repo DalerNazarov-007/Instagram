@@ -9,6 +9,16 @@ const jwt = require("jsonwebtoken")
 
 async function registerNewUser(req, res) {
     const data = await userValid.validateAsync(req.body)
+
+    const existingEmail = await userModel.findOne({email: data.email})
+    if (existingEmail) {
+        return res.status(400).send({message: "User with this email already exists"})
+    }
+    const existingUsername = await userModel.findOne({username: data.username})
+    if (existingUsername) {
+        return res.status(400).send({message: "Username already exists"})
+    }
+
     const user = new userModel(data)
     await user.save()
 

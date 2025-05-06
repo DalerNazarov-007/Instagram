@@ -1,7 +1,7 @@
 const { Schema, default: mongoose } = require("mongoose");
 
 const postSchema = new Schema({
-    name: {
+    title: {
         type: String,
         minLength: 5,
         maxLength: 20

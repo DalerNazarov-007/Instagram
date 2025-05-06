@@ -1,11 +1,10 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const usersRouter = require("./routes/users.router");
 const commentsRouter = require("./routes/comments.router");
 const postsRouter = require("./routes/posts.router");
 const usersRegisterRouter = require("./routes/user.register.router");
-const jwt = require("jsonwebtoken");
 const usersLoginRouter = require("./routes/user.login.router");
+const storiesRouter = require("./routes/stories.router");
 
 
 const app = express();
@@ -16,9 +15,9 @@ mongoose.connect("mongodb://127.0.0.1:27017/InstagramUsers").then(() => {
   console.log("Connected!");
 });
 
-app.use("/users", usersRouter)
 app.use("/comments", commentsRouter)
 app.use("/posts", postsRouter)
+app.use("/stories", storiesRouter)
 
 app.use("/register", usersRegisterRouter)
 app.use("/login", usersLoginRouter)
