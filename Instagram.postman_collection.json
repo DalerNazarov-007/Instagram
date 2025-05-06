@@ -163,6 +163,77 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Adding a story",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTc1OGJmOTgxODYxNDhmODM0NzE5MiIsImlhdCI6MTc0NjUxMzU5MywiZXhwIjoxNzQ2NTE0NDkzfQ.1P5MVO5_URKEXAncWWwQi7ok-r2vz-lbW_BA--1zr1c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "videoUrl",
+							"value": "https://youtu.be/VPYftS-kvYM?list=RDVPYftS-kvYM",
+							"type": "text"
+						},
+						{
+							"key": "UserId",
+							"value": "6819a6c79e29d517a42c4fcc",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4444/stories",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"stories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTc1OGJmOTgxODYxNDhmODM0NzE5MiIsImlhdCI6MTc0NjUxNTMzMCwiZXhwIjoxNzQ2NTE2MjMwfQ.LL4BDuJBpiBFtk1MNkF1YzzMV2PZtvTcEZTGIrehAPI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4444/stories",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"stories"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
